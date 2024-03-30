@@ -8,6 +8,7 @@ using namespace std;
 
 int main(int argc, char *argv[])
 {
+  /*
     // Binary Search Tree tests
     BinarySearchTree<char,int> bt;
     bt.insert(std::make_pair('d', 4));
@@ -32,14 +33,19 @@ int main(int argc, char *argv[])
     // bt.remove('b');
 
     // AVL Tree Tests
-    AVLTree<char,int> at;
-    at.insert(std::make_pair('a',1));
-    at.insert(std::make_pair('b',2));
+    AVLTree<int,int> at;
+    at.insert(std::make_pair(2,9));
+    at.print();
+    at.insert(std::make_pair(1,8));
+    at.print();
+    at.insert(std::make_pair(0,159));
+    at.print();
 
     cout << "\nAVLTree contents:" << endl;
-    for(AVLTree<char,int>::iterator it = at.begin(); it != at.end(); ++it) {
+    for(AVLTree<int,int>::iterator it = at.begin(); it != at.end(); ++it) {
         cout << it->first << " " << it->second << endl;
     }
+    at.print();
     if(at.find('b') != at.end()) {
         cout << "Found b" << endl;
     }
@@ -47,7 +53,16 @@ int main(int argc, char *argv[])
         cout << "Did not find b" << endl;
     }
     cout << "Erasing b" << endl;
-    at.remove('b');
+    //at.remove('b');*/
+
+    AVLTree<uint16_t, uint16_t> testTree;
+
+	  testTree.insert(std::make_pair(2, 9));
+    testTree.print();
+	  testTree.insert(std::make_pair(1, 8));
+    testTree.print();
+	  testTree.insert(std::make_pair(0, 159));
+    testTree.print();
 
     return 0;
 }
